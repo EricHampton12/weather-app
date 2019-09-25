@@ -12,110 +12,121 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center bg-primary text-white">
-        <h1 class="display-4">Weather Now</h1>
-        <p class="text">Enter your Zipcode below for Forecast.</p>
 
+    <body class="container">
+        <h1>Weather Update</h1>
 
-    </div>
+        <div id="inputForm" class="form-inline">
 
-    <!-- Start search bar -->
+            <input type="number" class="form-control" placeholder="Enter Zipcode" id="zipInput">
 
-    <div class="searchContainer text-center" <div id="form-group">
-        <label for="Zip"></label>
-        <input type="text" class="searchControl" id="searchInput" placeholder="Zip code">
-        <button type="submit" class="searchControl btn btn-primary" id="searchBtn">Get Forecast</button>
+            <button type="button" class="btn btn-primary" id="weatherButton">Get Weather</button>
 
-
-    </div>
-
-    <!-- End search section -->
-
-    <!-- Begin Inputs -->
-
-    <div class="container mt-5 text-center city-container bg-primary " id="cityHeader">
-        <div class="row">
-            <div class="col-12">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">City</h5>
-                        <p class="card-text" id="name"></p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    <table class="table temp-table text-center">
-        <thread>
-            <tr class="bg-light">
-                <th scope="col" colspan="3">
-                    <h5>Temperature</h5>
-                </th>
-            </tr>
-        </thread>
-        <thread>
-            <tr class="bg-primary">
-                <td id="tempF" scope="row"></td>
-                <td id="tempC" scope="row"></td>
-                <td id="tempK" scope="row"></td>
-            </tr>
-        </thread>
-    </table>
 
-    <table class="table condition-table text-center">
-        <thread>
+        <div id="error" class="panel panel-danger">
 
-            <h5>Weather</h5>
-            <tr class="bg-light" scope="col">
-                <th id="weatherDescriptionHeader">
-                </th>
-            </tr>
-        </thread>
-        <thread>
-            <tr class="bg-primary">
-                <td id="status" scope="row"></td>
-            </tr>
-        </thread>
-    </table>
+            <div class="panel-heading">
+                <h3 class="panel-title">Error</h3>
+            </div>
 
-    
-    <tr class="bg-light" scope="col">
-        <th id="weatherIcon">
-        </th>
-    </tr>
-    </thread>
-    <thread>
-        <tr class="bg-primary">
-            <td id="status" scope="row"></td>
-        </tr>
-    </thread>
-    </table>
+            <div class="panel-body">
+                <p id="errorMessage"></p>
+            </div>
+
+        </div>
+
+        <div id="output">
+
+            <div class="panel panel-info">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">City</h3>
+                </div>
+
+                <div class="panel-body">
+                    <p id="cityOutput"></p>
+                </div>
+
+            </div>
+
+            <div class="panel panel-info">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Temperature</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Kelvin</th>
+                            <th>Fahrenheit</th>
+                            <th>Celsius</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p id="temperatureOutputK"></p>
+                            </td>
+                            <td>
+                                <p id="temperatureOutputF"></p>
+                            </td>
+                            <td>
+                                <p id="temperatureOutputC"></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="panel panel-info">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Condition</h3>
+                </div>
+
+                <div class="panel-body">
+                    <p id="conditionOutput" class="condition"></p>
+                </div>
+
+            </div>
+
+            <div class="panel panel-info">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Views</h3>
+                </div>
+
+                <div class="panel-body">
+                    <img alt="" src="" id="weatherIcon" width="400">
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="main.js"></script>
+
+    </body>
+
+</html>
 
 
 
-
-    <p id="errorMessage" class="text-center py-2 text-danger"></p>
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
 </body>
 

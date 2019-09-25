@@ -1,26 +1,48 @@
-body{
-   
-}
-
-.container{
-    padding-left: 40px;
-}
-
-
-.searchInput {
-    background: rgb(212, 36, 36);
-}
-
-.searchInput{
-    color: black;
-
-}
-
-.table .temptable{
-    height: 40px;
-
-}
-
-.h5 {
+.container {
+    max-width: 500px;
+  }
+  
+  h1 {
     text-align: center;
-}
+    color: rgb(9, 115, 228);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #inputForm {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .panel-title {
+    text-align: center
+  }
+  
+  th, td {
+    text-align: center;
+  }
+  
+  .table {
+    margin-bottom: 0px;
+  }
+  
+  .condition {
+    text-align: center;
+  }
+  
+  #error {
+    display: none;
+    color: red;
+  }
+  
+  #output {
+    display: none;
+  }
+  
+  #cityOutput {
+      text-align: center;
+  }
+
+ 
+  
