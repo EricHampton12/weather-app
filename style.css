@@ -1,0 +1,26 @@
+body{
+   
+}
+
+.container{
+    padding-left: 40px;
+}
+
+
+.searchInput {
+    background: rgb(212, 36, 36);
+}
+
+.searchInput{
+    color: black;
+
+}
+
+.table .temptable{
+    height: 40px;
+
+}
+
+.h5 {
+    text-align: center;
+}
